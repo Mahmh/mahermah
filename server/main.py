@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
@@ -7,6 +8,7 @@ from lib.constants import BACKEND_SERVER_URL, WEB_SERVER_URL, BLOG_URL
 from lib.emails import send_contact_email
 from lib.models import BlogPost, ContactForm
 from lib.blog import list_blogs, get_blog
+from pathlib import Path
 
 # Init
 app = FastAPI()
@@ -24,6 +26,11 @@ app.add_middleware(
 
 
 # Endpoints
+BASE_DIR = Path(__file__).resolve().parent
+ASSETS_DIR = BASE_DIR / "blog" / "assets"
+app.mount("/blog/assets", StaticFiles(directory=str(ASSETS_DIR)))
+
+
 @app.post('/contact')
 @limiter.limit('3/minute')
 async def contact(request: Request, form: ContactForm):
