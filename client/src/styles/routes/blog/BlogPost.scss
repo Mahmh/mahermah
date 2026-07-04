@@ -6,11 +6,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    get-color("background"),
-    get-color("secondary-background")
-  );
+  background: linear-gradient(to bottom,
+      get-color("background"),
+      get-color("secondary-background"));
   color: get-color("text");
   min-height: 100vh;
   padding: 6rem 2rem;
@@ -161,6 +159,7 @@
 
     thead {
       background-color: color.adjust(get-color("accent"), $lightness: -30%);
+
       th {
         font-weight: 600;
       }
@@ -170,10 +169,8 @@
       transition: 100ms background-color ease;
 
       &:hover {
-        background-color: color.adjust(
-          get-color("background"),
-          $lightness: -3%
-        );
+        background-color: color.adjust(get-color("background"),
+            $lightness: -3%);
       }
 
       &:last-child td {
@@ -184,8 +181,8 @@
 
   img {
     border-radius: 0.5rem;
-    width: 45vw;
-    max-width: 700px;
+    width: 70vw;
+    max-width: 900px;
 
     @include breakpoint(1000px) {
       width: 100%;

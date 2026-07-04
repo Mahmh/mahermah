@@ -10,9 +10,9 @@ import { useLayoutEffect, useEffect } from "react";
 import { useSignals } from "@preact/signals-react/runtime";
 import { signal } from "@preact/signals-react";
 import { BACKEND_SERVER_URL } from "@const";
+import { isBlogHost, transformImageUrl } from "@context";
 import type { BlogPost, ServerMsg } from "@types";
 import "katex/dist/katex.min.css";
-import { isBlogHost } from "@context";
 
 const post = signal<BlogPost | null>(null);
 const loading = signal(true);
@@ -89,7 +89,7 @@ export default function BlogPost() {
 
   return (
     <div id="blog-post">
-      <img src={post.value.img} alt={post.value.title} id="post-img" />
+      <img src={transformImageUrl(post.value.img)} alt={post.value.title} id="post-img" />
       <article id="post-container">
         <section id="title-and-date">
           <h1>{post.value.title}</h1>
@@ -110,6 +110,10 @@ export default function BlogPost() {
             a: ({ node, ...props }) => (
               <a {...props} target="_blank" rel="noopener noreferrer" />
             ),
+            img: ({ src, alt, ...props }) => {
+              const newSrc = transformImageUrl(src || "");
+              return <img src={newSrc} alt={alt || ""} {...props} />;
+            },
           }}
         >
           {post.value.content}

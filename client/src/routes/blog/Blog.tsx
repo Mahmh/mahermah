@@ -4,8 +4,8 @@ import { useSignals } from "@preact/signals-react/runtime";
 import { signal } from "@preact/signals-react";
 import { Link } from "react-router-dom";
 import { BACKEND_SERVER_URL } from "@const";
+import { isBlogHost, transformImageUrl } from "@context";
 import type { BlogPost } from "@types";
-import { isBlogHost } from "@context";
 
 const loading = signal(true);
 const search = signal("");
@@ -107,7 +107,7 @@ export default function Blog() {
                 to={isBlogHost.value ? `/${post.slug}` : `/blog/${post.slug}`}
                 className="blog-post"
               >
-                <img src={post.img} alt={post.title} className="post-img" />
+                <img src={transformImageUrl(post.img)} alt={post.title} className="post-img" />
                 <div className="post-content">
                   <h3 className="post-title">{post.title}</h3>
                   <p className="post-excerpt">{post.excerpt}</p>
