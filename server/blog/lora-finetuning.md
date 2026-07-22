@@ -102,7 +102,7 @@ LoRA models can be **merged** into the base model for deployment, but you can al
 
 For example, you can have 3 LoRA adapters and 1 base model, and you can combine each LoRA adapter with the base model for deploying them in their separate endpoints. That way, you can switch between LoRA adapters for different tasks while still reusing the same base model.
 
-![Training & Validation Loss Curve](/img/blog-assets/lora-adapters.svg)
+![Training & Validation Loss Curve](/api/blog/assets/lora-finetuning/lora-adapters.svg)
 
 ## 7. How to Reproduce
 Full setup & training code in [this repository](https://github.com/Mahmh/ml-research-papers/tree/main/lora). 

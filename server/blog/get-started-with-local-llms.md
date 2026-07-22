@@ -2,7 +2,7 @@
 title: Setting Up Local LLMs and Using Them to Solve Coding Problems
 date: 2026-07-04
 tags: [LLM]
-img: /api/blog/assets/get-started-with-local-llms/fig3.4.png
+img: /api/blog/assets/get-started-with-local-llms/fig3.4.webp
 excerpt: Set up and use local LLMs via Ollama and the Continue extension for efficient, private, and cost-effective coding tasks like refactoring, documentation, and debugging.
 ---
 
@@ -114,19 +114,19 @@ In this example, I want to build a FastAPI server to serve blog articles through
 
 This is an example codebase that contains blog articles with a currently-empty entrypoint file. I then prompt it to write code for connecting the articles to a FastAPI server.
 
-![Figure 1.1 The prompt and the initial codebase](/api/blog/assets/get-started-with-local-llms/fig1.1.png)
+![Figure 1.1 The prompt and the initial codebase](/api/blog/assets/get-started-with-local-llms/fig1.1.webp)
 
 Here is the resultant code. I copy-pasted the code from the chat interface to the file.
 
-![Figure 1.2 The result](/api/blog/assets/get-started-with-local-llms/fig1.2.png)
+![Figure 1.2 The result](/api/blog/assets/get-started-with-local-llms/fig1.2.webp)
 
 I also created a bash script called `run.bash` then I asked it to generate the code for running the server.
 
-![Figure 1.3 Bash script to run the server](/api/blog/assets/get-started-with-local-llms/fig1.3.png)
+![Figure 1.3 Bash script to run the server](/api/blog/assets/get-started-with-local-llms/fig1.3.webp)
 
 Another follow-up prompt:
 
-![Figure 1.4 Another modification](/api/blog/assets/get-started-with-local-llms/fig1.4.png)
+![Figure 1.4 Another modification](/api/blog/assets/get-started-with-local-llms/fig1.4.webp)
 
 ### Example 2: Refactoring & Documentation
 Suppose you have a function that has too many parameters and does multiple tasks, which can happen often in production code. You can tell the model to reduce the complexity through refactoring.
@@ -301,9 +301,9 @@ if __name__ == "__main__":
 
 Here I made a prompt that contains 3 tasks in bullet points:
 
-![Figure 2.1 The refactoring & documentation prompt](/api/blog/assets/get-started-with-local-llms/fig2.1.png)
+![Figure 2.1 The refactoring & documentation prompt](/api/blog/assets/get-started-with-local-llms/fig2.1.webp)
 
-![Figure 2.2 The result](/api/blog/assets/get-started-with-local-llms/fig2.2.png)
+![Figure 2.2 The result](/api/blog/assets/get-started-with-local-llms/fig2.2.webp)
 
 Full generated output for `order_calculator.py`:
 ```py
@@ -466,7 +466,7 @@ At least for this simple example, not only did the model perform the 3 given tas
 
 I then told the model to adjust `main.py`:
 
-![Figure 2.3 The prompt to adjust the script file](/api/blog/assets/get-started-with-local-llms/fig2.3.png)
+![Figure 2.3 The prompt to adjust the script file](/api/blog/assets/get-started-with-local-llms/fig2.3.webp)
 
 ```py
 from order_calculator import calculate_order_total, OrderDetails
@@ -518,35 +518,35 @@ This time, I will use a more capable model that my hardware supports: **Qwen 3.6
 
 Suppose I have a web app for chatting. The front-end codebase contains about 20 files (excluding `node_modules` directory), and it displays a weird error when you run the app.
 
-![Figure 3.1](/api/blog/assets/get-started-with-local-llms/fig3.1.png)
+![Figure 3.1](/api/blog/assets/get-started-with-local-llms/fig3.1.webp)
 
 I pasted the error into the prompt and pressed Enter to see if the model is able to locate the error and troubleshoot it without guidance.
 
-![Figure 3.2](/api/blog/assets/get-started-with-local-llms/fig3.2.png)
+![Figure 3.2](/api/blog/assets/get-started-with-local-llms/fig3.2.webp)
 
-![Figure 3.3](/api/blog/assets/get-started-with-local-llms/fig3.3.png)
+![Figure 3.3](/api/blog/assets/get-started-with-local-llms/fig3.3.webp)
 
 After figuring out where the issue is, you can fix it yourself, but in this case I approved the model's solution by clicking Apply. The generated code resolved the error.
 
-![Figure 3.4](/api/blog/assets/get-started-with-local-llms/fig3.4.png)
+![Figure 3.4](/api/blog/assets/get-started-with-local-llms/fig3.4.webp)
 
-![Figure 3.5](/api/blog/assets/get-started-with-local-llms/fig3.5.png)
+![Figure 3.5](/api/blog/assets/get-started-with-local-llms/fig3.5.webp)
 
 But now, when you type a message (like "hi") in the chat input of the web app, it displays another error.
 
-![Figure 3.6](/api/blog/assets/get-started-with-local-llms/fig3.6.png)
+![Figure 3.6](/api/blog/assets/get-started-with-local-llms/fig3.6.webp)
 
 This one appears to be a bit more complicated than the previous one. Let's now see what the model will do.
 
-![Figure 3.7](/api/blog/assets/get-started-with-local-llms/fig3.7.png)
+![Figure 3.7](/api/blog/assets/get-started-with-local-llms/fig3.7.webp)
 
-![Figure 3.8](/api/blog/assets/get-started-with-local-llms/fig3.8.png)
+![Figure 3.8](/api/blog/assets/get-started-with-local-llms/fig3.8.webp)
 
-![Figure 3.9](/api/blog/assets/get-started-with-local-llms/fig3.9.png)
+![Figure 3.9](/api/blog/assets/get-started-with-local-llms/fig3.9.webp)
 
 After applying the changes, the error was also resolved without further issues.
 
-![Figure 3.10](/api/blog/assets/get-started-with-local-llms/fig3.10.png)
+![Figure 3.10](/api/blog/assets/get-started-with-local-llms/fig3.10.webp)
 
 ## 7. Conclusion
 Now, you might notice that those examples appear to be manufactured and relatively simple. Local LLMs, especially the smaller ones, need specific instructions to make them useful, and they struggle when code complexity increases. You often need to adjust the prompt and retry to make the model achieve the desired goal. However, as the LLM industry grows over time, I expect open-source models to achieve better results and run faster on consumer hardware, becoming more accessible to more people. You should try to experiment between models that have more parameters and see how you can use the most out of your hardware, since larger models typically produce better outputs and are easier to work with.
