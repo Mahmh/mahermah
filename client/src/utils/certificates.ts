@@ -2,21 +2,21 @@ export const CERTIFICATES = [
   {
     "title": "CS50AI",
     "issuer": "CS50 Harvard",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/CS50 Harvard/CS50AI.pdf",
     "type": "pdf"
   },
   {
     "title": "Maher Experience CMU Q Mindcraft Certificate",
     "issuer": "Carnegie Mellon University",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/Carnegie Mellon University/Maher Experience CMU-Q Mindcraft Certificate.pdf",
     "type": "pdf"
   },
   {
     "title": "MindCraft Participant Certificate Signed Page 31",
     "issuer": "Carnegie Mellon University",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/Carnegie Mellon University/MindCraft_Participant_Certificate_signed_Page_31.png",
     "type": "image"
   },
@@ -121,71 +121,106 @@ export const CERTIFICATES = [
   {
     "title": "ML Engineer Path",
     "issuer": "Google Cloud Skills Boost",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/Google Cloud Skills Boost/ML Engineer Path.png",
     "type": "image"
   },
   {
     "title": "Profile",
     "issuer": "Google Cloud Skills Boost",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/Google Cloud Skills Boost/Profile.png",
     "type": "image"
   },
   {
     "title": "Building Recommendation Systems",
     "issuer": "Great Learning Academy",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/Great Learning Academy/Building Recommendation Systems.jpg",
     "type": "image"
   },
   {
     "title": "How To Build Your Own Chatbot Using Python",
     "issuer": "Great Learning Academy",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/Great Learning Academy/How to Build your own Chatbot using Python.jpg",
     "type": "image"
   },
   {
     "title": "Introduction To Artificial Intelligence",
     "issuer": "Great Learning Academy",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/Great Learning Academy/Introduction to Artificial Intelligence.jpg",
     "type": "image"
   },
   {
     "title": "Python For Machine Learning & Data Science",
     "issuer": "Great Learning Academy",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/Great Learning Academy/Python for Machine Learning & Data Science.jpg",
     "type": "image"
   },
   {
     "title": "Python For Machine Learning",
     "issuer": "Great Learning Academy",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/Great Learning Academy/Python for Machine Learning.jpg",
     "type": "image"
   },
   {
     "title": "Sentiment Analysis Using Python",
     "issuer": "Great Learning Academy",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/Great Learning Academy/Sentiment Analysis using Python.jpg",
     "type": "image"
   },
   {
     "title": "Presentation Certificate (Highschool Track)",
     "issuer": "Qatar Innovation Program 2025",
-    "category": null,
+    "category": "Miscellaneous",
     "path": "/certificates/Qatar Innovation Program 2025/Presentation Certificate (Highschool Track).jpeg",
     "type": "image"
   },
   {
-    "title": "AI & Data Science Subject Spotlight",
+    "title": "High-school Robotics Certificate",
+    "issuer": "ISC Doha",
+    "category": "Miscellaneous",
+    "path": "/certificates/Robotics/High-school Robotics Certificate.jpg",
+    "type": "image"
+  },
+  {
+    "title": "AI & Data Science",
     "issuer": "Springpod",
-    "category": null,
-    "path": "/certificates/Springpod/AI & Data Science Subject Spotlight.pdf",
+    "category": "Python & AI",
+    "path": "/certificates/Springpod/AI & Data Science.pdf",
+    "type": "pdf"
+  },
+  {
+    "title": "BSc (Hons) Computer Science",
+    "issuer": "Springpod",
+    "category": "Miscellaneous",
+    "path": "/certificates/Springpod/BSc (Hons) Computer Science.pdf",
+    "type": "pdf"
+  },
+  {
+    "title": "Computer Science",
+    "issuer": "Springpod",
+    "category": "Miscellaneous",
+    "path": "/certificates/Springpod/Computer Science.pdf",
+    "type": "pdf"
+  },
+  {
+    "title": "Data Science",
+    "issuer": "Springpod",
+    "category": "Python & AI",
+    "path": "/certificates/Springpod/Data Science.pdf",
+    "type": "pdf"
+  },
+  {
+    "title": "Electrical and Electronic Engineering",
+    "issuer": "Springpod",
+    "category": "Miscellaneous",
+    "path": "/certificates/Springpod/Electrical and Electronic Engineering.pdf",
     "type": "pdf"
   },
   {
