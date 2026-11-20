@@ -31,14 +31,14 @@ services:
       - server
   
   db:
-    image: postgres:latest
+    image: postgres:16-alpine
     container_name: mahermah-db-c
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
     volumes:
-      - db_data:/var/lib/postgresql/data
+      - db_data_v2:/var/lib/postgresql/data
     restart: always
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
@@ -71,4 +71,4 @@ services:
       retries: 5
 
 volumes:
-  db_data:
+  db_data_v2:
